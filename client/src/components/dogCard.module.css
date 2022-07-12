@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Display&family=Poppins&family=Splash&display=swap');
+
+
+
+.dogCard {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 500px;
+    height: 300px;
+    margin: 15px;
+    margin-bottom: 5vw;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.45); 
+  }
+
+  .dogCard:hover {
+    animation: pulse 1.4s ease-in-out infinite;
+}
+
+.raza {
+  margin-top: 1vw;
+  display: flex;
+  width: 500px;
+  justify-content: center;
+  font-family: 'Finlandica', sans-serif;
+  font-size: 30px;
+  color: black;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.25); 
+}
+
+.estadisticas {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-content: center;
+  width: 500px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.estadisticas .individual {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Finlandica', sans-serif;
+  font-size: 20px;
+  color: black;
+}
+
+.estadisticas .individual span {
+  font-family: 'Finlandica', sans-serif;
+  color: black;
+  font-size: 30px;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.20);
+}
+  
+  .imgBx {
+    position: absolute;
+    left: 50%;
+    top: -50px;
+    transform: translateX(-50%);
+    width: 240px;
+    height: 164px;
+    border-radius: 15px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.45);
+    overflow: hidden;
+    transition: 0.5s;
+  }
+  
+  .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+ 
+
+  @keyframes pulse {
+    0%
+    {
+        box-shadow: 0 0 25px #18ffff,
+                    0 0 25px #18ffff;
+    }
+}

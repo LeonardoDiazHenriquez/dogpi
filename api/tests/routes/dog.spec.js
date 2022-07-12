@@ -6,10 +6,15 @@ const { Dog, conn } = require('../../src/db.js');
 
 const agent = session(app);
 const dog = {
-  name: 'Pug',
+  name: 'Firulais #1',
+  height: Math.floor(Math.random() * 499) + 'cm - 500cm',
+  weight: Math.floor(Math.random() * 50) + 1 + 'kg - 3000kg',
+  lifespan: Math.floor(Math.random() * 49) + 1 + ' años - 50 años',
+  image: 'http://localhost:3000/static/media/imgTest.2f53adf2.jpg',
+  temperaments: 'Fun,Loving'
 };
 
-describe('Videogame routes', () => {
+describe('Dogs routes', () => {
   before(() => conn.authenticate()
   .catch((err) => {
     console.error('Unable to connect to the database:', err);

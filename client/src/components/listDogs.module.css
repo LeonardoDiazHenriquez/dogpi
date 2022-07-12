@@ -1,0 +1,76 @@
+
+.container{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1vw;
+}
+
+.dogCard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 500px;
+  height: 300px;
+  margin: 15px;
+  margin-bottom: 5vw;
+  border-radius: 20px;
+}
+
+.dogCard:hover {
+  animation: pulse 1.4s ease-in-out infinite;
+}
+
+.imgBx {
+  position: absolute;
+  left: 50%;
+  top: -50px;
+  transform: translateX(-50%);
+  width: 240px;
+  height: 164px;
+  border-radius: 15px;
+  
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.raza {
+  margin-top: 7vw;
+  display: flex;
+  width: 500px;
+  justify-content: center;
+  font-family: 'Finlandica', sans-serif;
+  font-size: 30px;
+  color: white;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.55); 
+  text-align: center;
+}
+
+.individual {
+  text-align: center;
+}
+
+.individual span {
+  font-family: 'Finlandica', sans-serif;
+  color: white;
+  font-size: 25px;
+}
+
+
+@keyframes pulse {
+  0%
+  {
+      box-shadow: 0 0 25px #18ffff,
+                  0 0 25px #18ffff;
+  }
+}

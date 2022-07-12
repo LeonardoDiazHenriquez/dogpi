@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Finlandica&display=swap');
+
+.container {
+    border-right: 2px solid rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    margin: 10px;
+}
+
+.container select{
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	margin: 1px;
+}
+
+.container select::-ms-expand {
+    display: none;
+}
+
+.container {
+	max-width: 250px;
+	position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+ 
+.container select{
+	display: inline-block;
+	width: 100%;
+	cursor: pointer;
+  	padding: 10px;
+  	height: 42px;
+  	outline: 0; 
+  	border: 0;
+	border-radius: 0;
+	background: #f0f0f0;
+	color: #7b7b7b;
+	font-size: 1em;
+	color: #999;
+	font-family: 
+	'Quicksand', sans-serif;
+	border:2px solid rgba(0,0,0,0.2);
+    border-radius: 12px;
+    position: relative;
+    transition: all 0.25s ease;
+	box-shadow: 0 15px 50px rgba(0, 0, 0, 0.35);
+    width: 145px;
+}
+ 
+.container select:hover{
+	animation: pulse 1.4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%
+    {
+        box-shadow: 0 0 25px #18ffff,
+                    0 0 25px #18ffff;
+    }
+}
+
+.container i{
+	right: 20px;
+	top: calc(50% - 13px);
+	width: 16px;
+	height: 16px;
+	display: block;
+	border-left:4px solid #8e24aa;
+	border-bottom:4px solid #8e24aa;
+	transform: rotate(-45deg); 
+	transition: all 0.25s ease;
+}
+
+.content {
+    display: flex;
+    flex-direction: inherit;
+    align-items: center;
+    text-align: center;
+	margin-bottom: 30px;
+}
+
+.content p {
+	font-family: 'Finlandica', sans-serif;
+	font-size: 20px;
+	color:white;
+}
