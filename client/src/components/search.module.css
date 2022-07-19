@@ -1,0 +1,9 @@
+.inBusca input {
+    height: 40px;
+    width: 250px;
+    border-radius: 7px;
+    letter-spacing: 1px;
+    border: 0;
+    margin-bottom: 4vw;
+    text-align: center;
+}

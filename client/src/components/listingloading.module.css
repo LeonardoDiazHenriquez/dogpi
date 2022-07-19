@@ -1,16 +1,10 @@
-body, html .app{
-    height: 100vh;
-    background: linear-gradient(45deg, #c99955, #6b07a6);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    overflow: auto;
-}
-  
+
 .container {
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 1vw;
 }
-
 .left {
     width: 20%;
     display: flex;
@@ -30,10 +24,3 @@ body, html .app{
     justify-content: center;
     align-items: center;
 }
-
-.topRight {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-

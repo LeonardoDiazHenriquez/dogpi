@@ -7,6 +7,8 @@ import Sidebar from '../components/sidebar';
 import Pagination from '../components/pagination';
 import styles from './listingdog.module.css'
 import CircleLoader from "react-spinners/CircleLoader";
+import Search from '../components/search';
+import ListingLoading from '../components/listingloading';
 
 const backendUrl = process.env.REACT_APP_BACKEND_URL;
 
@@ -62,7 +64,7 @@ const getDogs = () => {
 }
 
 return <div className={styles.app}>
-          <NavBar onSearch={(name) => setNameFilter(name)}/>
+          <NavBar />
           <div className={styles.container}>
             <div className={styles.left}>
               <Sidebar onTemperamentChange={(temperament) => {
@@ -71,26 +73,20 @@ return <div className={styles.app}>
               }} onBreedChange={(dogId) => {
                 setDogIdFilter(dogId);
               }} dogs={dogs} dogSelected={dogIdFilter} />
-            </div>
-            <div className={styles.right}>
-              <div className={styles.topRight}>
-                <Createdog />
-                <Order onChange={({field, type}) =>{
+              <Order onChange={({field, type}) =>{
                   setOrderByField(field);
                   setOrderByType(type);
-                }} />
-              </div>
-              {isLoading ? <div className={styles.loaderWrapper}>
-                <CircleLoader
-                  color="#fff"
-                  cssOverride={{}}
-                  loading
-                  speedMultiplier={1}
-                /> 
+              }} />
+              <Createdog />
+            </div>
+            <div className={styles.right}>
+              <Search onSearch={(name) => setNameFilter(name)}/>
+              {isLoading ? <div>
+                <ListingLoading />
                 <span> Loading...</span>
                           </div> : 
                 <ListDog dogs={dogs.filter(dog => dogIdFilter === "" || dog.id === dogIdFilter)}/>}
-              <Pagination total={totalDogs} size={size} actualPage={page} onPageChange={(page) => {
+                <Pagination total={totalDogs} size={size} actualPage={page} onPageChange={(page) => {
                 setPage(page);
               }}/>
             </div>

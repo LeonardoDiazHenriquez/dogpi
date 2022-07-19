@@ -7,7 +7,7 @@ const Createdog = () => {
     return (
         <div className={styles.container}>
             <Link to = "/dogs/form">
-                <div className={styles.btn}>
+                <div className={styles.select}>
                     Create Breed
                 </div>  
             </Link>

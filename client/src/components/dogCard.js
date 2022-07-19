@@ -5,7 +5,8 @@ import { Link } from "react-router-dom";
 
 const DogCard = ({id, name, weight, image, lifespan}) => {
     return (
-        <div className={styles.dogCard}>
+      <div className={styles.dogCard}>
+        <div className={styles.skeleton}>
           <Link to={`/dogs/${id}`}>
             <div className={styles.imgBx}>
               <img src={image} alt="dogImage"/>
@@ -25,6 +26,7 @@ const DogCard = ({id, name, weight, image, lifespan}) => {
             </div>
           </Link>
         </div>
+      </div>  
     );
 };
 

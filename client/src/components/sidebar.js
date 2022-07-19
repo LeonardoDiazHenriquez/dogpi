@@ -28,18 +28,6 @@ const Sidebar = ({onTemperamentChange, onBreedChange, dogs, dogSelected}) => {
                 </select>
                 <i></i>
             </div>
-            <div className={styles.content}>
-                <span> Raza </span>
-                <select onChange={(e) => {
-                    onBreedChange(e.target.value);
-                }}
-                value={dogSelected === "" ? "default" : dogSelected}
-                >
-                    <option value="" defaultValue>Seleccionar</option>
-                    {dogs.map(dog => <option value={dog.id}>{dog.name}</option>)}
-                </select>
-                <i></i>
-            </div>
         </div>
     )
 }
